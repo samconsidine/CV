@@ -1,0 +1,264 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+% \usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\usepackage{xcolor}
+\usepackage{etoolbox}
+
+% \usepackage[T1]{fontenc}
+% \usepackage{tgbonum}
+\usepackage{fontenc}
+\usepackage{mathpazo}
+\usepackage{setspace}
+
+% \begin{spacing}{1.0}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\setlength{\footskip}{4.08003pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+% \urlstyle{same}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=blue,
+  linkbordercolor=blue,% hyperlink borders will be red
+  pdfborderstyle={/S/U/W 1}% border style will be underline of width 1pt
+}
+
+% \raggedbottom
+% \raggedright
+% \setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{0pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-1pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeitem}[1]{
+  \item{
+    {#1 \vspace{0pt}}
+  }
+}
+
+\newcommand{\resumesubheading}[4]{
+  \vspace{2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1}, {#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-3pt}
+}
+
+\newcommand{\resumesubsubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumesubItem}[1]{\resumeitem{#1}\vspace{-5pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumesubheadingliststart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumesubheadinglistend}{\end{itemize}}
+\newcommand{\resumeitemliststart}{\begin{itemize}}
+\newcommand{\resumeitemlistend}{\end{itemize}\vspace{-3pt}}
+
+% ----------------------------------------
+%%%%%%%%% TOGGLES! %%%%%%%%%%%%%%
+
+\newtoggle{ml}
+\newtoggle{bold}
+\newtoggle{superbold}
+
+\toggletrue{ml}
+\toggletrue{bold}
+\togglefalse{superbold}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+%----------HEADING----------
+
+\begin{center}
+    \textbf{\Huge \scshape{Sam Considine}} \\ \vspace{8pt}
+    \small Stratford, London $|$ 
+    \href{mailto:sambconsidine@gmail.com}{sambconsidine@gmail.com} $|$
+    07808813731 $|$
+    \href{https://uk.linkedin.com/in/samuel-considine-685249158}{\underline{LinkedIn}} $|$
+    \href{https://github.com/samconsidine}{\underline{GitHub}} 
+\end{center}
+
+\vspace{0.3em}
+
+%----------PROFILE------------
+\section{Profile}
+
+Machine learning engineer with 5 years of industry experience. Passionate about solving challenging real-world problems using technology. Strong background in computer vision, neural search architecture, and language models. Seeking opportunities to increase our collective intelligence by building large-scale AI systems.
+
+%----------SKILLS------------
+\section{skills}
+Python, PyTorch, Hugging Face (Transformers, Datasets, PEFT, Accelerate, Candle), NLP, PyTorch Geometric, Data Analysis tools (Pandas, Matplotlib, Seaborn, Polars), Big Data (PySpark, AWS Glue, AWS EMR, AWS Athena, Hadoop, HDFS), databases (SQL, PostgreSQL, MongoDB) NumPy, Cython, C, C++, Rust, Git.
+
+%-----------EDUCATION-----------
+\section{Education}
+
+\resumesubheadingliststart
+    \resumesubheading
+      {University of Cambridge}{Cambridge, UK}
+      {MPhil Advanced Computer Science}{Oct 2021 - Jul 2022}
+      \resumeitemliststart
+        \resumeitem{\textbf{Grade:} Distinction | \textbf{Thesis title:} Neural Algorithmic Reasoning for Pseudotime Trajectory Inference.} 
+        \resumeitem{\textbf{Awarded best Master's thesis of the year by the faculty committee.}}
+         % \resumeitem{\textbf{Awards:}
+             % \begin{itemize}[leftmargin=*, topsep=0pt, itemsep=0pt]
+             %     \item Highly Commended Research Project - Awarded by committee decision to the best Master's thesis of the year.
+                 % \item St. Edmund's Prize - An award given for outstanding academic achievement.
+             % \end{itemize}
+         % }
+      \resumeitemlistend
+      \vspace{-0.5em}
+    \resumesubheading
+      {University of York}{York, UK}
+      {BSc Mathematics}{Sept 2013 - July 2017}
+      \resumeitemliststart
+        \resumeitem{\textbf{Grade:} First-Class Honours | \textbf{Dissertation title:} Computer Vision Based Feature Extraction for Assessing Cell Heterogeneity.}
+        % \resumeitem{\textbf{Awards:}
+        %     \begin{itemize}[leftmargin=*, topsep=0pt, itemsep=0pt]
+        %         \item Summer Accelerator Business Competition - Awarded to emerging talent in business leadership. 
+        %     \end{itemize}
+        % }
+      \resumeitemlistend
+\resumesubheadinglistend
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+
+\resumesubheadingliststart
+    \resumesubheading{Interim CTO}{}{Noggin HQ}{September 2023 – Present}
+        \resumeitemliststart
+            \resumeitem{
+                Designed and built our main product in PyTorch: a bidirectional encoder credit scoring model that uses personal bank transaction records to create neural representations of borrower behaviour. 
+                %  -- a bidirectional transformer encoder trained using self-supervised learning.
+            }
+            \resumeitem{
+                 Sourced datasets totalling 7 billion bank transaction records to train the model, resulting in possibly the most accurate consumer credit scoring model in the world, with error 50\% lower than Experian.
+            }
+            \resumeitem{
+                Communication with investors, as well as full evaluation of the business feasibility and tradeoffs of various technical approaches with respect to company objectives.
+            }
+            \resumeitem{
+                Built the company data ETL pipeline to train neural network models at scale using AWS Glue, EMR, Athena and Sagemaker, as well as custom infrastructure on EC2 to perform distributed training.
+            }
+            \resumeitem{
+                Employed 'infrastructure as code' MLOps, using Terraform to deploy an API that could access our credit model through a Sagemaker endpoint.
+            }
+            \resumeitem{
+                Found and assisted with hiring a new CTO and a researcher to continue work on the model.
+            }
+        \resumeitemlistend
+
+    \resumesubheading{Machine Learning Engineer}{}{Loci}{November 2022 – September 2023}
+        \resumeitemliststart
+            \resumeitem{
+                Built our main product - a multimodal search and recommendation engine for game assets, which was essential in securing our first customers, including one of the world's biggest gaming companies, a crucial component in gaining £4m in seed funding as a team of 4.
+            }
+            \resumeitem{
+                Increased the efficiency of our existing zero-shot game asset classification system by 3 orders of magnitude while improving code simplicity by creating a custom vector store + caching system.
+            }
+            \resumeitem{
+                Re-implemented and fine-tuned large multimodal language/image transformers (OpenCLIP-2B) on data from 3D assets, building a data pipeline, allowing us to train, benchmark and deploy models.
+            }
+            \resumeitem{
+                Mentored a team of 6 Masters students in a collaboration with Imperial College to build a system for 3D texture synthesis from a text prompt using stable diffusion, UNet and some custom rendering.
+            }
+        \resumeitemlistend
+
+    \resumesubheading{Research Assistant}{}{University of Cambridge}{July 2022 – October 2022}
+        \resumeitemliststart
+            \resumeitem{
+                Hired to contiinue research on my thesis and to build a platform to be used by clinicians to use machine learning systems to assist with diagnosis.
+            }
+%             \resumeitem{
+%                 Developed a methodology published in ICML, a novel graph neural network based tool to infer cell dynamics from gene expression data. Demonstrated the efficacy and versatility of this computational model through rigorous benchmarking over a diverse range of datasets.
+%             }
+%             \resumeitem{
+%                 Contributed to shifting computational biology paradigms by highlighting the potential of deep learning for complex system modeling as an alternative to traditional computational methods.
+%             }
+%             \resumeitem{
+%                 Developed and productionised a web-based platform, using AutoML systems like genetic algorithms and Explainable AI research such as "What-If Analysis", enabling medical practitioners to use interpretable AI tooling to assist diagnosis.
+%             }
+        \resumeitemlistend
+
+    \resumesubheading{Senior Data Scientist}{}{Arca-Blanca}{May 2021 – October 2021}
+        \resumeitemliststart
+            \resumeitem{
+                Worked for a Machine Learning and Data Science consulting firm, consulting with executives to create and assist with predictive modelling tasks throughout their enterprise.
+            }
+            % \resumeitem{
+            %     Started an initiative to parse a client's sales records to discover that a widespread discount service didn't amount to a commensurate increase in sales, saving the company millions in gross profit.
+            % }
+        \resumeitemlistend
+
+    \resumesubheading{\iftoggle{superbold}{Senior }{}\iftoggle{ml}{Machine Learning Engineer}{Data Scientist}}{}{After the Off}{September 2017 - January 2021}
+        \resumeitemliststart
+            \resumeitem{
+                Lead developer on our main horse racing product: using machine learning on live data feeds to generate in-play odds for horse races, establishing us as a leading provider of in-play horse racing odds.
+            }
+            \resumeitem{
+                Designed and led a project using computer vision to derive horse positions on a race track in real time using only a live video feed of the race. Built the whole pipeline, from video feed to prediction.
+            }
+        \resumeitemlistend
+
+     \resumesubheading {Research Assistant}{} {University of York}{July 2017 - September 2017}
+         \resumeitemliststart
+             \resumeitem{
+                 Hired to continue work on my dissertation, building computer vision based feature extraction to aid in cancer research.
+             }
+         \resumeitemlistend
+    
+    \resumesubheading{Self-Employed}{}{Uptodata}{June 2012 – December 2016}
+        \resumeitemliststart
+            \resumeitem{
+                Started a successful marketing company as a teenager, providing marketing data to wholesalers.
+            }
+        \resumeitemlistend
+\resumesubheadinglistend
+%-------------------------------------------
+\end{document}
