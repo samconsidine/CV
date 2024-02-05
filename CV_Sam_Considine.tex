@@ -4,7 +4,7 @@
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
-% \usepackage[usenames,dvipsnames]{color}
+\usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage{hyperref}
@@ -68,8 +68,8 @@
 }
 
 \newcommand{\CVSubHeading}[4]{
-  \vspace{2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+  \vspace{4pt}\item
+    \begin{tabular*}{0.985\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1}, {#3} & \textit{#4} \\
     \end{tabular*}\vspace{-3pt}
 }
@@ -97,19 +97,8 @@
 \newcommand{\CVItemListStart}{\begin{itemize}}
 \newcommand{\CVItemListEnd}{\end{itemize}\vspace{-3pt}}
 
-% ----------------------------------------
-%%%%%%%%% TOGGLES! %%%%%%%%%%%%%%
-
-\newtoggle{ml}
-\newtoggle{bold}
-\newtoggle{superbold}
-
-\toggletrue{ml}
-\toggletrue{bold}
-\togglefalse{superbold}
-
 %-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%  Document  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{document}
@@ -119,7 +108,7 @@
     \textbf{\Huge \scshape{Sam Considine}} \\ \vspace{8pt}
     \small Stratford, London $|$ 
     \href{mailto:sambconsidine@gmail.com}{sambconsidine@gmail.com} $|$
-    07808813731 $|$
+    +44 7808813731 $|$
     \href{https://uk.linkedin.com/in/samuel-considine-685249158}{\underline{LinkedIn}} $|$
     \href{https://github.com/samconsidine}{\underline{GitHub}} 
 \end{center}
@@ -133,7 +122,7 @@ Machine learning engineer with 5 years of industry experience. Passionate about 
 
 %----------SKILLS------------
 \section{skills}
-Python, PyTorch, Hugging Face (Transformers, Datasets, PEFT, Accelerate, Candle), NLP, PyTorch Geometric, Data Analysis tools (Pandas, Matplotlib, Seaborn, Polars), Big Data (PySpark, AWS Glue, AWS EMR, AWS Athena, Hadoop, HDFS), databases (SQL, PostgreSQL, MongoDB) NumPy, Cython, C, C++, Rust, Git.
+Python, PyTorch, Hugging Face (Transformers, Datasets, PEFT, Accelerate, Candle), NLP, PyTorch Geometric, Data Analysis tools (Pandas, Matplotlib, Seaborn, Polars), Big Data (PySpark, AWS Glue, AWS EMR, AWS Athena, Hadoop, HDFS), databases (SQL, PostgreSQL, MongoDB) NumPy, Terraform, Cython, C, C++, Rust, Git.
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -143,26 +132,17 @@ Python, PyTorch, Hugging Face (Transformers, Datasets, PEFT, Accelerate, Candle)
       {University of Cambridge}{Cambridge, UK}
       {MPhil Advanced Computer Science}{Oct 2021 - Jul 2022}
       \CVItemListStart
-        \CVItem{\textbf{Grade:} Distinction | \textbf{Thesis title:} Neural Algorithmic Reasoning for Pseudotime Trajectory Inference.} 
-        \CVItem{\textbf{Awarded best Master's thesis of the year by the faculty committee.}}
-         % \CVItem{\textbf{Awards:}
-             % \begin{itemize}[leftmargin=*, topsep=0pt, itemsep=0pt]
-             %     \item Highly Commended Research Project - Awarded by committee decision to the best Master's thesis of the year.
-                 % \item St. Edmund's Prize - An award given for outstanding academic achievement.
-             % \end{itemize}
-         % }
+        \CVItem{\textbf{Grade:} Distinction | \textbf{Thesis:} Neural Algorithmic Reasoning for Pseudotime Trajectory Inference.} 
+        \CVItem{Awarded best Master's thesis of the year by the faculty committee.}
+        \CVItem{St Edmund's Award for Academic Excellence.}
       \CVItemListEnd
       \vspace{-0.5em}
     \CVSubHeading
       {University of York}{York, UK}
       {BSc Mathematics}{Sept 2013 - July 2017}
       \CVItemListStart
-        \CVItem{\textbf{Grade:} First-Class Honours | \textbf{Dissertation title:} Computer Vision Based Feature Extraction for Assessing Cell Heterogeneity.}
-        % \CVItem{\textbf{Awards:}
-        %     \begin{itemize}[leftmargin=*, topsep=0pt, itemsep=0pt]
-        %         \item Summer Accelerator Business Competition - Awarded to emerging talent in business leadership. 
-        %     \end{itemize}
-        % }
+        \CVItem{\textbf{Grade:} First-Class Honours | \textbf{Dissertation: } Computer Vision Based Feature Extraction for Assessing Cell Heterogeneity.}
+        \CVItem{Winner of the Santander Summer Accelerator Business competetion and grant for an idea for an e-commerse platform.}
       \CVItemListEnd
 \CVSubHeadingListEnd
 
@@ -173,11 +153,11 @@ Python, PyTorch, Hugging Face (Transformers, Datasets, PEFT, Accelerate, Candle)
     \CVSubHeading{Interim CTO}{}{Noggin HQ}{September 2023 – Present}
         \CVItemListStart
             \CVItem{
-                Designed and built our main product in PyTorch: a bidirectional encoder credit scoring model that uses personal bank transaction records to create neural representations of borrower behaviour. 
+                Designed and built our main credit scoring product in PyTorch: a bidirectional encoder transformer model that uses personal bank transaction records to create neural representations of borrower behaviour. 
                 %  -- a bidirectional transformer encoder trained using self-supervised learning.
             }
             \CVItem{
-                 Sourced datasets totalling 7 billion bank transaction records to train the model, resulting in possibly the most accurate consumer credit scoring model in the world, with error 50\% lower than Experian.
+                 Sourced datasets totalling 7 billion bank transaction records to train the model.
             }
             \CVItem{
                 Communication with investors, as well as full evaluation of the business feasibility and tradeoffs of various technical approaches with respect to company objectives.
@@ -187,9 +167,6 @@ Python, PyTorch, Hugging Face (Transformers, Datasets, PEFT, Accelerate, Candle)
             }
             \CVItem{
                 Employed 'infrastructure as code' MLOps, using Terraform to deploy an API that could access our credit model through a Sagemaker endpoint.
-            }
-            \CVItem{
-                Found and assisted with hiring a new CTO and a researcher to continue work on the model.
             }
         \CVItemListEnd
 
@@ -202,7 +179,7 @@ Python, PyTorch, Hugging Face (Transformers, Datasets, PEFT, Accelerate, Candle)
                 Increased the efficiency of our existing zero-shot game asset classification system by 3 orders of magnitude while improving code simplicity by creating a custom vector store + caching system.
             }
             \CVItem{
-                Re-implemented and fine-tuned large multimodal language/image transformers (OpenCLIP-2B) on data from 3D assets, building a data pipeline, allowing us to train, benchmark and deploy models.
+                Re-implemented and fine-tuned large multimodal language/image transformers (OpenCLIP-2B) on 10m novel views of 3D assets, building a data pipeline, allowing us to train, benchmark and deploy models.
             }
             \CVItem{
                 Mentored a team of 6 Masters students in a collaboration with Imperial College to build a system for 3D texture synthesis from a text prompt using stable diffusion, UNet and some custom rendering.
@@ -213,6 +190,9 @@ Python, PyTorch, Hugging Face (Transformers, Datasets, PEFT, Accelerate, Candle)
         \CVItemListStart
             \CVItem{
                 Hired to contiinue research on my thesis and to build a platform to be used by clinicians to use machine learning systems to assist with diagnosis.
+            }
+            \CVItem{
+                Worked with some of the top researchers in explainable AI, developing a UI to bridge the knowledge gap bewteen doctors and data scientists. Allowing doctors to use private, explainable AI methods with their patients.
             }
 %             \CVItem{
 %                 Developed a methodology published in ICML, a novel graph neural network based tool to infer cell dynamics from gene expression data. Demonstrated the efficacy and versatility of this computational model through rigorous benchmarking over a diverse range of datasets.
@@ -230,18 +210,21 @@ Python, PyTorch, Hugging Face (Transformers, Datasets, PEFT, Accelerate, Candle)
             \CVItem{
                 Worked for a Machine Learning and Data Science consulting firm, consulting with executives to create and assist with predictive modelling tasks throughout their enterprise.
             }
-            % \CVItem{
-            %     Started an initiative to parse a client's sales records to discover that a widespread discount service didn't amount to a commensurate increase in sales, saving the company millions in gross profit.
-            % }
-        \CVItemListEnd
-
-    \CVSubHeading{\iftoggle{superbold}{Senior }{}\iftoggle{ml}{Machine Learning Engineer}{Data Scientist}}{}{After the Off}{September 2017 - January 2021}
-        \CVItemListStart
             \CVItem{
-                Lead developer on our main horse racing product: using machine learning on live data feeds to generate in-play odds for horse races, establishing us as a leading provider of in-play horse racing odds.
+                Lead various projects, collaborating with executive at large companies.
             }
             \CVItem{
-                Designed and led a project using computer vision to derive horse positions on a race track in real time using only a live video feed of the race. Built the whole pipeline, from video feed to prediction.
+                Lead data scientist of a project for one of the UK's largest software companies, creating a model of customer churn and customer segmentation analysis. The segmentation is still used as a core part of the marketing team strategy. 
+            }
+        \CVItemListEnd
+
+    \CVSubHeading{Machine Learning Engineer}{}{After the Off}{September 2017 - January 2021}
+        \CVItemListStart
+            \CVItem{
+                Led developer on our main horse racing product: using machine learning on live data feeds to generate in-play odds for horse races, establishing us as a leading provider of in-play horse racing odds.
+            }
+            \CVItem{
+                Designed and led a project using computer vision to derive horse positions on a race track in real time using only a live video feed of the race. Built the whole pipeline starting from the video feed.
             }
         \CVItemListEnd
 
@@ -256,6 +239,12 @@ Python, PyTorch, Hugging Face (Transformers, Datasets, PEFT, Accelerate, Candle)
         \CVItemListStart
             \CVItem{
                 Started a successful marketing company as a teenager, providing marketing data to wholesalers.
+            }
+            \CVItem{
+                Made contacts in the giftware industry after finding a catalog of wholesalers from an event organised by my father, used this to build a database of giftware retailers in the UK, which allowed me to sell marketing information to wholesalers.
+            }
+            \CVItem{
+                Paid my way through university, allowing me to do without a maintinance loan or other job.
             }
         \CVItemListEnd
 \CVSubHeadingListEnd
